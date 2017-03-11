@@ -88,7 +88,7 @@ fun Tenant.addRentReceipt(rentReceipt: RentReceipt) {
 		// Update Tenant
 		// 1) Calculate how much credit in total = rentReceipt.amount + tenant.currentRentCredit
 		var totalCredit = rentReceipt.amount + this.currentRentCreditAmount
-		// 2) Calculate the number of weeks paid fully = (totalCredit)/tenant.weeklyRentAmount round up
+		// 2) Calculate the number of weeks paid fully = (totalCredit)/tenant.weeklyRentAmount round down
 		var numWeeksPaidFully = Math.floor(totalCredit / this.weeklyRentAmount).toLong()
 		// 3) Calculate the credit left = totalCredit - weeksPaidFully*weeklyRentAm
 		this.currentRentCreditAmount = totalCredit - numWeeksPaidFully * this.weeklyRentAmount
