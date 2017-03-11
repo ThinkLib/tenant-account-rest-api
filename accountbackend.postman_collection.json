@@ -1,0 +1,571 @@
+{
+	"variables": [],
+	"info": {
+		"name": "accountbackend",
+		"_postman_id": "93f6adaa-efc2-26bc-ecfb-ee5c242eaaa0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all Tenants",
+			"request": {
+				"url": "http://localhost:8080/tenant",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create Tenant",
+			"request": {
+				"url": "http://localhost:8080/tenant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"name\",\n  \"weeklyRentAmount\": 100,\n  \"currentRentPaidToDate\":\"2016-01-01\",\n  \"currentRentCreditAmount\": 0\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getOne Tenant",
+			"request": {
+				"url": "http://localhost:8080/tenant/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Rent Receipts for a Tenant",
+			"request": {
+				"url": "http://localhost:8080/tenant/1/rent-receipt",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 500\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create Rent Receipt for a Tenant",
+			"request": {
+				"url": "http://localhost:8080/tenant/1/rent-receipt",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 25\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getOne Rent Receipt for a Tenant",
+			"request": {
+				"url": "http://localhost:8080/tenant/2/rent-receipt/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getOne Rent Receipt",
+			"request": {
+				"url": "http://localhost:8080/rent-receipt/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Tenants with a Rent Receipt created within the last N hours",
+			"request": {
+				"url": "http://localhost:8080/tenant?paidInTheLastNumberOfHour=1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODgzODM0NTUsInVzZXJfbmFtZSI6IklOVEVSTkFMLWFkbWluIiwic2NvcGUiOlsiYWxsIl0sImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwYWYzMjU4NC1iZTViLTQ4N2QtYTcyNy04ZDk3YzVkMThjNDIiLCJjbGllbnRfaWQiOiJmdXNpb25jbG91ZCJ9.UzvlujcTxX69hbDbOjLZkBAty9i0-T8mWkzwbcXtOMRfrQFV9yp68tDfeFdvo8AmfKgxRlbdv_1ucuPXg978a9TLaZ20d6-HG37rrn05n3LSKdTgulzGea86BELkPMBycWCq4U-VxoPxvUHXanPRBW21FEqOE4_nGtNAlgMNr0gJy3L996PLrZXdcvRI2ShHV4hQJKgIe7bml6GWtWVj-4sXdH5O6FROT_sBuq07EedZ09yAF_BxlQasdtp8ugw_xlON8GFmzMBuwoFCmJjyD9Jev-1ESmJHNrdL-ylDkNSbDaiLUI2JI9oSmvjy9UxnoV3RQNi1goO6N-xJ5p2lTg",
+						"description": ""
+					},
+					{
+						"key": "MystStudioPassphrase",
+						"value": "03b6061f-12be-4847-afd6-5ebd79857d21",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:8888",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "51554f82-fd2d-45f6-85b8-ab0907e36de2",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:8888/console/",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8",
+						"description": ""
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.1593859230.1487032908",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
