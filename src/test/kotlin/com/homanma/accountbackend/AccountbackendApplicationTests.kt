@@ -18,10 +18,11 @@ import org.springframework.http.RequestEntity
 import org.springframework.test.context.junit4.SpringRunner
 import java.net.URI
 import java.time.LocalDate
+import com.homanma.accountbackend.domain.Tenant
 
 @RunWith(SpringRunner::class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-class AccountbackendApplicationTests() {
+class AccountbackendApplicationTest() {
 
 	@Autowired
 	lateinit var restTemplate: TestRestTemplate
@@ -43,7 +44,7 @@ class AccountbackendApplicationTests() {
 	}
 
 	inline fun <reified T : Any> typeRef(): ParameterizedTypeReference<T> = object : ParameterizedTypeReference<T>() {}
-
+	
 	// Integration Test to test the GET /tenant
 	// Should return 2
 	@Test
