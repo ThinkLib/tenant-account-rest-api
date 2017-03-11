@@ -10,7 +10,6 @@ target/
 .springBeans
 
 ### MAVEN ###
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
