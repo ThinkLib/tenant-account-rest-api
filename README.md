@@ -61,7 +61,7 @@ Fetches a Rent Receipt by ID
  ```
  GET /rent-receipt/{rentReceiptId}
  ```
-## Test
+## Testing 
 
 Contains examples of the following:
 * Integration Tests
