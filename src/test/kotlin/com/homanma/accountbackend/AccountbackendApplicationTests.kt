@@ -19,7 +19,11 @@ import org.springframework.test.context.junit4.SpringRunner
 import java.net.URI
 import java.time.LocalDate
 import com.homanma.accountbackend.domain.Tenant
+import com.homanma.accountbackend.service.TenantRepository
+import com.homanma.accountbackend.service.RentReceiptRepository
 
+
+// Assumed that h2 is empty before tests are run
 @RunWith(SpringRunner::class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class AccountbackendApplicationTest() {
@@ -33,6 +37,12 @@ class AccountbackendApplicationTest() {
 	lateinit var homan: TenantP
 	lateinit var isaac: TenantP
 	lateinit var scrub: TenantP
+	
+	@Autowired
+	lateinit var tenantRepository: TenantRepository
+	
+	@Autowired
+	lateinit var rentReceiptRepository: RentReceiptRepository
 
 	@Before
 	fun setUp() {
@@ -52,6 +62,7 @@ class AccountbackendApplicationTest() {
 		val request = RequestEntity<Any>(HttpMethod.GET, URI("/tenant"))
 		var body = restTemplate.exchange(request, typeRef<List<TenantP>>()).body
 		assertEquals(2, body.size)
+		assertEquals(body.size, tenantRepository.count())
 
 		var retrievedHoman = body.get(0)
 		assertNotNull(retrievedHoman.id)
@@ -109,6 +120,8 @@ class AccountbackendApplicationTest() {
 		var rentReceipt = RentReceipt(null, 275.0)
 		val postRequest = RequestEntity.post(URI("/tenant/$homanid/rent-receipt")).body(rentReceipt)
 		restTemplate.exchange(postRequest, typeRef<TenantP>()).body
+		
+		assertEquals(0, rentReceiptRepository.count());
 
 		val requestHoman = RequestEntity<Any>(HttpMethod.GET, URI("/tenant/$homanid"))
 		var retrievedHoman = restTemplate.exchange(requestHoman, typeRef<TenantP>()).body
@@ -120,6 +133,8 @@ class AccountbackendApplicationTest() {
 		assertEquals(LocalDate.of(2016, 10, 21), retrievedHoman.currentRentPaidToDate)
 		// assertThatAReceiptHasBeenAadded
 		assertEquals(1, retrievedHoman.rentReceiptIds?.size)
+		
+		assertEquals(1, rentReceiptRepository.count());
 
 		// Retrieve all receipts for Homan
 		val requestRentReceiptsForHoman = RequestEntity<Any>(HttpMethod.GET, URI("/tenant/$homanid/rent-receipt"))
