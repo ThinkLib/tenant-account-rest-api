@@ -71,13 +71,34 @@ class TenantServiceImpl(val tenantRepository: TenantRepository, val rentReceiptR
 		}
 
 		var tenant = tenantRepository.findOne(id)
+		// See Note below 
 		tenantManipulationService.addRentReceiptToTenant(tenant, rentReceipt)
 		rentReceiptRepository.save(rentReceipt)
 		tenantRepository.save(tenant)
 		return modelToEntityTransformer.toModel(rentReceipt)
 	}
 
-
+	// Note: Instead of tenantManipulationService, we could have used a function instead or added the functionality directly
+	// to the tenant class by "fun Tenant.addRentReceipt(rentReceipt: RentReceipt) : RentReceipt" etc
+//	val addRentReceiptToTenant = { tenant: Tenant, rentReceipt: RentReceipt ->
+//		if (tenant.weeklyRentAmount == 0.0) {
+//			tenant.currentRentCreditAmount = rentReceipt.amount + tenant.currentRentCreditAmount
+//		} else {
+//			// Update Tenant
+//			// 1) Calculate how much credit in total = rentReceipt.amount + tenant.currentRentCredit
+//			var totalCredit = rentReceipt.amount + tenant.currentRentCreditAmount
+//			// 2) Calculate the number of weeks paid fully = (totalCredit)/tenant.weeklyRentAmount round down
+//			var numWeeksPaidFully = Math.floor(totalCredit / tenant.weeklyRentAmount).toLong()
+//			// 3) Calculate the credit left = totalCredit - weeksPaidFully*weeklyRentAm
+//			tenant.currentRentCreditAmount = totalCredit - numWeeksPaidFully * tenant.weeklyRentAmount
+//			// 4) Update rentPaidToDate by weeksPaidFully weeks
+//			tenant.currentRentPaidToDate = tenant.currentRentPaidToDate.plusWeeks(numWeeksPaidFully)
+//		}
+//
+//		// Add the rentReceipt to the tenant
+//		tenant.rentReceipts.add(rentReceipt)
+//		rentReceipt.tenant = tenant
+//	}
 }
 
 @Service
