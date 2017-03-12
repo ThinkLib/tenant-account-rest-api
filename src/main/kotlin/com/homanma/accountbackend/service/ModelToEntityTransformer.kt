@@ -45,13 +45,15 @@ class ModelToEntityTransformer(val tenantRepo: TenantRepository, val rentReceipt
 			target = tenantRepo.getOne(tenantP.id)
 		}
 		// Update properties. Would be more convenient to use an object mapping tool like dozer, rather than to map individual fields one at a time
-		target.weeklyRentAmount = tenantP.weeklyRentAmount
-		if (tenantP.currentRentPaidToDate != null) {
-			target.currentRentPaidToDate = tenantP.currentRentPaidToDate
-		}
-		if (tenantP.currentRentCreditAmount != null) {
-			target.currentRentCreditAmount = tenantP.currentRentCreditAmount
-		}
+		target.apply({
+			weeklyRentAmount = tenantP.weeklyRentAmount
+			if (tenantP.currentRentPaidToDate != null) {
+				currentRentPaidToDate = tenantP.currentRentPaidToDate
+			}
+			if (tenantP.currentRentCreditAmount != null) {
+				currentRentCreditAmount = tenantP.currentRentCreditAmount
+			}
+		})
 		return target
 	}
 

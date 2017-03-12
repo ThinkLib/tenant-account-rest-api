@@ -15,6 +15,7 @@ import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 import java.util.Date
 import java.util.Optional
+import com.homanma.accountbackend.service.TenantManipulationService
 
 class TenantServiceMockTest {
 
@@ -29,6 +30,9 @@ class TenantServiceMockTest {
 
 	@Mock
 	lateinit var modelToEntityTransformer: ModelToEntityTransformer
+	
+	@Mock
+	lateinit var tenantManipulationService: TenantManipulationService
 
 	lateinit var homan: Tenant
 	lateinit var isaac: Tenant

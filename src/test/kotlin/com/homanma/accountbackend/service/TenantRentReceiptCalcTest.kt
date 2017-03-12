@@ -10,16 +10,22 @@ import org.junit.platform.runner.JUnitPlatform
 import org.junit.runner.RunWith
 import java.time.LocalDate
 import kotlin.test.assertEquals
+import org.springframework.beans.factory.annotation.Autowired
+import java.util.Date
+import java.util.ArrayList
+
 
 @RunWith(JUnitPlatform::class)
 object TenantRentReceiptCalcSpek : Spek({
 
+	val service: TenantManipulationService = TenantManipulationService()
+	
 	describe("a tenant called Homan") {
 		var homan = Tenant(null, null, "Homan", 300.0, LocalDate.of(2016, 10, 14), 50.0, mutableListOf())
 
 		on("adding a new rent receipt of 275") {
 			var rentReceipt = RentReceipt(null, 275.0)
-			homan.addRentReceipt(rentReceipt)
+			service.addRentReceiptToTenant(homan, rentReceipt)
 
 			it("should increment the paid to date to 2016-10-21 and have a currentRentCreditAmount of 25") {
 				assertEquals(25.0, homan.currentRentCreditAmount)
@@ -29,7 +35,7 @@ object TenantRentReceiptCalcSpek : Spek({
 
 		on("adding a new receipt of 274.0") {
 			var rentReceipt = RentReceipt(null, 274.0)
-			homan.addRentReceipt(rentReceipt)
+			service.addRentReceiptToTenant(homan, rentReceipt)
 
 			it("should keep the same paid to date but have a currentRentCreditAmount of 299") {
 				assertEquals(299.0, homan.currentRentCreditAmount)
@@ -39,7 +45,7 @@ object TenantRentReceiptCalcSpek : Spek({
 
 		on("adding a receipt of 10,000") {
 			var rentReceipt = RentReceipt(null, 10000.0)
-			homan.addRentReceipt(rentReceipt)
+			service.addRentReceiptToTenant(homan, rentReceipt)
 
 			it("should have a paid till date of 2017-06-16 but have a currentRentCreditAmount of 99") {
 				assertEquals(99.0, homan.currentRentCreditAmount)
