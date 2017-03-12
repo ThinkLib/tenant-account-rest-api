@@ -62,6 +62,7 @@ class AccountbackendApplicationTest() {
 		val request = RequestEntity<Any>(HttpMethod.GET, URI("/tenant"))
 		var body = restTemplate.exchange(request, typeRef<List<TenantP>>()).body
 		assertEquals(2, body.size)
+		// Check what is recorded has the same count
 		assertEquals(body.size, tenantRepository.count().toInt())
 
 		var retrievedHoman = body.get(0)
