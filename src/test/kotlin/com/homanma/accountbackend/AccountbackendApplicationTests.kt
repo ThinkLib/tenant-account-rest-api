@@ -62,7 +62,7 @@ class AccountbackendApplicationTest() {
 		val request = RequestEntity<Any>(HttpMethod.GET, URI("/tenant"))
 		var body = restTemplate.exchange(request, typeRef<List<TenantP>>()).body
 		assertEquals(2, body.size)
-		assertEquals(body.size, tenantRepository.count())
+		assertEquals(body.size, tenantRepository.count().toInt())
 
 		var retrievedHoman = body.get(0)
 		assertNotNull(retrievedHoman.id)
@@ -116,12 +116,12 @@ class AccountbackendApplicationTest() {
 	// Integration Test to test adding a receipt to Homan to see if it has changed the Tenant corectly
 	@Test
 	fun testCreateSingleRentReceipt() {
+		assertEquals(0, rentReceiptRepository.count().toInt());
+
 		var homanid = 1L
 		var rentReceipt = RentReceipt(null, 275.0)
 		val postRequest = RequestEntity.post(URI("/tenant/$homanid/rent-receipt")).body(rentReceipt)
 		restTemplate.exchange(postRequest, typeRef<TenantP>()).body
-		
-		assertEquals(0, rentReceiptRepository.count());
 
 		val requestHoman = RequestEntity<Any>(HttpMethod.GET, URI("/tenant/$homanid"))
 		var retrievedHoman = restTemplate.exchange(requestHoman, typeRef<TenantP>()).body
@@ -134,7 +134,7 @@ class AccountbackendApplicationTest() {
 		// assertThatAReceiptHasBeenAadded
 		assertEquals(1, retrievedHoman.rentReceiptIds?.size)
 		
-		assertEquals(1, rentReceiptRepository.count());
+		assertEquals(1, rentReceiptRepository.count().toInt());
 
 		// Retrieve all receipts for Homan
 		val requestRentReceiptsForHoman = RequestEntity<Any>(HttpMethod.GET, URI("/tenant/$homanid/rent-receipt"))
