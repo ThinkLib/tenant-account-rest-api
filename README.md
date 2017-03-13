@@ -65,7 +65,7 @@ Fetches a Rent Receipt by ID
 
 Contains examples of the following:
 * Integration Tests
-* Mockito Test - very execution path of a overloaded query
+* Mockito Test - verify the execution path and check arguments of the overloaded query
 * Unit Test
 
 ## Sample Payloads
@@ -78,4 +78,9 @@ Tenant
   "currentRentCreditAmount": 0
 }
  ```
-
+Rent Receipt
+ ```json
+{
+	"amount": 600
+} 
+ ```
